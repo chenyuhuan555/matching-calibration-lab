@@ -1,0 +1,318 @@
+{
+  "model": "deepseek-flash",
+  "split": "dev",
+  "runAt": "2026-11-11T09:30:47.835Z",
+  "summary": {
+    "total": 4,
+    "paired": 4,
+    "excludedCases": [],
+    "supportedCases": 2,
+    "unsupportedCases": 2,
+    "variants": {
+      "A": {
+        "labelCorrect": 4,
+        "decisionCorrect": 4,
+        "falsePass": 0,
+        "missedChat": 0,
+        "needsCheck": 1,
+        "quotePass": 4,
+        "failures": 0,
+        "pairsFullyCorrect": 2,
+        "errorCases": []
+      },
+      "B": {
+        "labelCorrect": 4,
+        "decisionCorrect": 4,
+        "falsePass": 0,
+        "missedChat": 0,
+        "needsCheck": 1,
+        "quotePass": 4,
+        "failures": 0,
+        "pairsFullyCorrect": 2,
+        "errorCases": []
+      }
+    }
+  },
+  "rows": [
+    {
+      "id": "01a",
+      "split": "dev",
+      "pair": "01-责任范围",
+      "purpose": "判定随岗位要求变化",
+      "requirement": "独立主导软件产品从需求到上线。直接证据需覆盖需求决策、上线决策或交付责任，且本人对整体负责。仅参与部分环节算部分支持。",
+      "resume": "参与招聘模块上线，负责验收测试。",
+      "expected": {
+        "label": "部分支持",
+        "decision": "需要补证"
+      },
+      "A": {
+        "answer": {
+          "decision": "需要补证",
+          "label": "部分支持",
+          "quote": "参与招聘模块上线，负责验收测试。",
+          "reason": "仅参与上线验收测试环节，未体现独立主导需求决策或上线决策并对整体负责。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "needsCheck": true,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 258,
+          "completion_tokens": 47,
+          "total_tokens": 305,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 258
+        },
+        "ms": 1864
+      },
+      "B": {
+        "answer": {
+          "quote": "参与招聘模块上线，负责验收测试。",
+          "label": "部分支持",
+          "decision": "需要补证",
+          "reason": "仅参与上线中的验收测试环节，未体现需求决策、上线决策或对整体交付负责。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "needsCheck": true,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 258,
+          "completion_tokens": 48,
+          "total_tokens": 306,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 258
+        },
+        "ms": 1755
+      }
+    },
+    {
+      "id": "01b",
+      "split": "dev",
+      "pair": "01-责任范围",
+      "purpose": "判定随岗位要求变化",
+      "requirement": "本人负责上线验收。能看出本人承担验收即支持，无需主导整个项目。",
+      "resume": "参与招聘模块上线，负责验收测试。",
+      "expected": {
+        "label": "支持",
+        "decision": "建议约聊"
+      },
+      "A": {
+        "answer": {
+          "decision": "建议约聊",
+          "label": "支持",
+          "quote": "参与招聘模块上线，负责验收测试。",
+          "reason": "简历明确写出本人负责验收测试，符合承担验收的要求。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 240,
+          "completion_tokens": 39,
+          "total_tokens": 279,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 240
+        },
+        "ms": 1755
+      },
+      "B": {
+        "answer": {
+          "quote": "参与招聘模块上线，负责验收测试。",
+          "label": "支持",
+          "decision": "建议约聊",
+          "reason": "简历明确写明本人负责验收测试，直接支持其承担上线验收。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 240,
+          "completion_tokens": 41,
+          "total_tokens": 281,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 240
+        },
+        "ms": 2139
+      }
+    },
+    {
+      "id": "02a",
+      "split": "dev",
+      "pair": "02-直属团队",
+      "purpose": "数字描述相近，人员关系不同",
+      "requirement": "直接管理至少 5 名团队成员。跨团队协调不计入直属管理，未提团队规模属于证据不足。",
+      "resume": "直属管理6名产品人员，负责绩效与人员安排。",
+      "expected": {
+        "label": "支持",
+        "decision": "建议约聊"
+      },
+      "A": {
+        "answer": {
+          "decision": "建议约聊",
+          "label": "支持",
+          "quote": "直属管理6名产品人员，负责绩效与人员安排。",
+          "reason": "简历明确写明直属管理6名产品人员，达到至少5名直属团队成员的要求。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 251,
+          "completion_tokens": 48,
+          "total_tokens": 299,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 251
+        },
+        "ms": 810
+      },
+      "B": {
+        "answer": {
+          "quote": "直属管理6名产品人员，负责绩效与人员安排。",
+          "label": "支持",
+          "decision": "建议约聊",
+          "reason": "简历明确写明直属管理6名产品人员，达到至少5名直属团队成员的要求。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 251,
+          "completion_tokens": 48,
+          "total_tokens": 299,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 251
+        },
+        "ms": 938
+      }
+    },
+    {
+      "id": "02b",
+      "split": "dev",
+      "pair": "02-直属团队",
+      "purpose": "数字描述相近，人员关系不同",
+      "requirement": "直接管理至少 5 名团队成员。跨团队协调不计入直属管理，未提团队规模属于证据不足。",
+      "resume": "协调6名项目成员推进交付，没有直属下属。",
+      "expected": {
+        "label": "明确不符",
+        "decision": "暂缓"
+      },
+      "A": {
+        "answer": {
+          "decision": "暂缓",
+          "label": "明确不符",
+          "quote": "协调6名项目成员推进交付，没有直属下属。",
+          "reason": "简历明确说明没有直属下属，且协调项目成员不属于直接管理团队，不符合至少管理5名直属成员的要求。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 250,
+          "completion_tokens": 54,
+          "total_tokens": 304,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 250
+        },
+        "ms": 1242
+      },
+      "B": {
+        "answer": {
+          "quote": "协调6名项目成员推进交付，没有直属下属。",
+          "label": "明确不符",
+          "decision": "暂缓",
+          "reason": "简历明确说明没有直属下属，协调项目成员不计入直属管理，不符合直接管理至少5名团队成员的要求。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 250,
+          "completion_tokens": 53,
+          "total_tokens": 303,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 250
+        },
+        "ms": 1447
+      }
+    }
+  ]
+}
