@@ -1,0 +1,1321 @@
+{
+  "model": "deepseek-flash",
+  "split": "round2",
+  "runAt": "2026-11-11T09:37:52.671Z",
+  "summary": {
+    "total": 12,
+    "paired": 12,
+    "excludedCases": [],
+    "supportedCases": 4,
+    "unsupportedCases": 8,
+    "expectedChecks": 4,
+    "expectedHolds": 4,
+    "variants": {
+      "A": {
+        "labelCorrect": 11,
+        "decisionCorrect": 11,
+        "falsePass": 0,
+        "missedChat": 1,
+        "prematureHold": 0,
+        "missedHold": 0,
+        "needsCheck": 5,
+        "quotePass": 12,
+        "failures": 0,
+        "pairsFullyCorrect": 5,
+        "errorCases": [
+          "12b"
+        ]
+      },
+      "B": {
+        "labelCorrect": 12,
+        "decisionCorrect": 12,
+        "falsePass": 0,
+        "missedChat": 0,
+        "prematureHold": 0,
+        "missedHold": 0,
+        "needsCheck": 4,
+        "quotePass": 12,
+        "failures": 0,
+        "pairsFullyCorrect": 6,
+        "errorCases": []
+      },
+      "C": {
+        "labelCorrect": 11,
+        "decisionCorrect": 11,
+        "falsePass": 0,
+        "missedChat": 1,
+        "prematureHold": 0,
+        "missedHold": 0,
+        "needsCheck": 5,
+        "quotePass": 12,
+        "failures": 0,
+        "pairsFullyCorrect": 5,
+        "errorCases": [
+          "12b"
+        ]
+      }
+    }
+  },
+  "rows": [
+    {
+      "id": "08a",
+      "split": "round2",
+      "pair": "08-历史与当前",
+      "purpose": "过去带过人，当前人数要单独核实",
+      "requirement": "当前职位的直属团队至少 5 人。历史职位的人数不能替代当前数据；矩阵协作人数不能当作直属人数。",
+      "resume": "上一家公司直属带8人。现任交付负责人，牵头12位产品、研发和客户侧同事推进交付。",
+      "expected": {
+        "label": "证据不足",
+        "decision": "需要补证"
+      },
+      "A": {
+        "answer": {
+          "decision": "需要补证",
+          "label": "证据不足",
+          "quote": "现任交付负责人，牵头12位产品、研发和客户侧同事推进交付。",
+          "reason": "简历只给出历史职位直属8人，当前职位仅提到矩阵协作12人，未说明当前直属团队人数。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": true,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 264,
+          "completion_tokens": 60,
+          "total_tokens": 324,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 136
+        },
+        "ms": 5718
+      },
+      "B": {
+        "answer": {
+          "quote": "现任交付负责人，牵头12位产品、研发和客户侧同事推进交付。",
+          "label": "证据不足",
+          "decision": "需要补证",
+          "reason": "简历只说明当前牵头12位跨职能同事协作，未明确当前职位直属团队人数，且历史职位8人不能替代当前数据。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": true,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 264,
+          "completion_tokens": 65,
+          "total_tokens": 329,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 136
+        },
+        "ms": 6125
+      },
+      "C": {
+        "answer": {
+          "quote": "现任交付负责人，牵头12位产品、研发和客户侧同事推进交付。",
+          "label": "证据不足",
+          "decision": "需要补证",
+          "reason": "简历只写了现任牵头12位跨职能同事，未说明当前直属团队人数，历史职位8人不能替代当前数据。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": true,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 326,
+          "completion_tokens": 62,
+          "total_tokens": 388,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 198
+        },
+        "ms": 5895
+      }
+    },
+    {
+      "id": "08b",
+      "split": "round2",
+      "pair": "08-历史与当前",
+      "purpose": "过去带过人，当前人数要单独核实",
+      "requirement": "当前职位的直属团队至少 5 人。历史职位的人数不能替代当前数据；矩阵协作人数不能当作直属人数。",
+      "resume": "上一家公司直属带8人。现任交付负责人，牵头12位产品、研发和客户侧同事推进交付；当前直属团队只有3人。",
+      "expected": {
+        "label": "明确不符",
+        "decision": "暂缓"
+      },
+      "A": {
+        "answer": {
+          "decision": "暂缓",
+          "label": "明确不符",
+          "quote": "当前直属团队只有3人。",
+          "reason": "岗位要求当前直属团队至少5人，简历明确写明当前直属团队只有3人，构成明确反证。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 271,
+          "completion_tokens": 48,
+          "total_tokens": 319,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 143
+        },
+        "ms": 5842
+      },
+      "B": {
+        "answer": {
+          "quote": "当前直属团队只有3人。",
+          "label": "明确不符",
+          "decision": "暂缓",
+          "reason": "简历明确说明当前直属团队仅3人，未达到至少5人的要求。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 271,
+          "completion_tokens": 41,
+          "total_tokens": 312,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 143
+        },
+        "ms": 6014
+      },
+      "C": {
+        "answer": {
+          "quote": "当前直属团队只有3人。",
+          "label": "明确不符",
+          "decision": "暂缓",
+          "reason": "简历明确写当前直属团队只有3人，低于要求的至少5人。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 333,
+          "completion_tokens": 40,
+          "total_tokens": 373,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 205
+        },
+        "ms": 5629
+      }
+    },
+    {
+      "id": "09a",
+      "split": "round2",
+      "pair": "09-原型与投产",
+      "purpose": "材料只列原型和明确限定为未投产的区别",
+      "requirement": "过去 24 个月内至少一次负责把 AI 功能交付给真实业务团队使用。以 2026 年 11 月为当前时间。只列过原型或评审，未说明该时段是否还有投产经历，算部分支持；有正式使用但时间不明，算证据不足。",
+      "resume": "2026年3月做了采购助手原型，组织两次场景评审。此前主要做采购系统。",
+      "expected": {
+        "label": "部分支持",
+        "decision": "需要补证"
+      },
+      "A": {
+        "answer": {
+          "decision": "需要补证",
+          "label": "部分支持",
+          "quote": "2026年3月做了采购助手原型，组织两次场景评审。",
+          "reason": "简历只说明在24个月内做过原型和评审，未说明是否已交付真实业务团队使用。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": true,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 298,
+          "completion_tokens": 54,
+          "total_tokens": 352,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 170
+        },
+        "ms": 1758
+      },
+      "B": {
+        "answer": {
+          "quote": "2026年3月做了采购助手原型，组织两次场景评审。",
+          "label": "部分支持",
+          "decision": "需要补证",
+          "reason": "简历只提到原型和评审，未说明该时段是否还有投产经历。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": true,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 298,
+          "completion_tokens": 49,
+          "total_tokens": 347,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 170
+        },
+        "ms": 2215
+      },
+      "C": {
+        "answer": {
+          "quote": "2026年3月做了采购助手原型，组织两次场景评审。",
+          "label": "部分支持",
+          "decision": "需要补证",
+          "reason": "原型和评审属于非投产交付，未说明该时段是否有正式投产使用，按规则算部分支持。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": true,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 360,
+          "completion_tokens": 56,
+          "total_tokens": 416,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 232
+        },
+        "ms": 2379
+      }
+    },
+    {
+      "id": "09b",
+      "split": "round2",
+      "pair": "09-原型与投产",
+      "purpose": "材料只列原型和明确限定为未投产的区别",
+      "requirement": "过去 24 个月内至少一次负责把 AI 功能交付给真实业务团队使用。以 2026 年 11 月为当前时间。只列过原型或评审，未说明该时段是否还有投产经历，算部分支持；有正式使用但时间不明，算证据不足。",
+      "resume": "2026年3月做了采购助手原型，组织两次场景评审。过去24个月经手的AI功能全部停留在评审，均未投入业务使用。",
+      "expected": {
+        "label": "明确不符",
+        "decision": "暂缓"
+      },
+      "A": {
+        "answer": {
+          "decision": "暂缓",
+          "label": "明确不符",
+          "quote": "过去24个月经手的AI功能全部停留在评审，均未投入业务使用。",
+          "reason": "简历明确说明过去24个月AI功能均未投产，与岗位要求直接冲突。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 309,
+          "completion_tokens": 52,
+          "total_tokens": 361,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 181
+        },
+        "ms": 2380
+      },
+      "B": {
+        "answer": {
+          "quote": "过去24个月经手的AI功能全部停留在评审，均未投入业务使用。",
+          "label": "明确不符",
+          "decision": "暂缓",
+          "reason": "简历明确说明过去24个月AI功能均未投入业务使用，直接反证了交付给真实业务团队使用的要求。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 309,
+          "completion_tokens": 60,
+          "total_tokens": 369,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 181
+        },
+        "ms": 2077
+      },
+      "C": {
+        "answer": {
+          "quote": "过去24个月经手的AI功能全部停留在评审，均未投入业务使用。",
+          "label": "明确不符",
+          "decision": "暂缓",
+          "reason": "简历明确说明过去24个月AI功能均未投入业务使用，与要求中至少一次交付真实业务团队使用直接冲突。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 371,
+          "completion_tokens": 61,
+          "total_tokens": 432,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 243
+        },
+        "ms": 2248
+      }
+    },
+    {
+      "id": "10a",
+      "split": "round2",
+      "pair": "10-项目范围",
+      "purpose": "一个项目的反证不能覆盖另一个项目",
+      "requirement": "至少有一个软件项目由本人从需求到正式上线整体负责。只写明负责某环节、没有交代整体负责人时算部分支持。某一项目由他人负责只对该项目构成反证。",
+      "resume": "绩效模块由搭档整体负责，我负责验收。另一个薪酬门户由我从需求、上线计划到正式发布独立负责。",
+      "expected": {
+        "label": "支持",
+        "decision": "建议约聊"
+      },
+      "A": {
+        "answer": {
+          "decision": "建议约聊",
+          "label": "支持",
+          "quote": "另一个薪酬门户由我从需求、上线计划到正式发布独立负责。",
+          "reason": "简历明确说明薪酬门户由本人从需求到正式发布独立负责，满足整体负责要求。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 280,
+          "completion_tokens": 52,
+          "total_tokens": 332,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 152
+        },
+        "ms": 894
+      },
+      "B": {
+        "answer": {
+          "quote": "另一个薪酬门户由我从需求、上线计划到正式发布独立负责。",
+          "label": "支持",
+          "decision": "建议约聊",
+          "reason": "简历明确写到另一个薪酬门户由本人从需求、上线计划到正式发布独立负责，满足从需求到正式上线整体负责的要求。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 280,
+          "completion_tokens": 61,
+          "total_tokens": 341,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 152
+        },
+        "ms": 989
+      },
+      "C": {
+        "answer": {
+          "quote": "另一个薪酬门户由我从需求、上线计划到正式发布独立负责。",
+          "label": "支持",
+          "decision": "建议约聊",
+          "reason": "简历明确写到另一个薪酬门户由本人从需求、上线计划到正式发布独立负责，满足整体负责并正式上线的要求。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 342,
+          "completion_tokens": 59,
+          "total_tokens": 401,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 214
+        },
+        "ms": 1046
+      }
+    },
+    {
+      "id": "10b",
+      "split": "round2",
+      "pair": "10-项目范围",
+      "purpose": "一个项目的反证不能覆盖另一个项目",
+      "requirement": "至少有一个软件项目由本人从需求到正式上线整体负责。只写明负责某环节、没有交代整体负责人时算部分支持。某一项目由他人负责只对该项目构成反证。",
+      "resume": "绩效模块由搭档整体负责，我负责验收。我做过的其他软件项目也只负责验收，从未对整体交付负责。",
+      "expected": {
+        "label": "明确不符",
+        "decision": "暂缓"
+      },
+      "A": {
+        "answer": {
+          "decision": "暂缓",
+          "label": "明确不符",
+          "quote": "绩效模块由搭档整体负责，我负责验收。我做过的其他软件项目也只负责验收，从未对整体交付负责。",
+          "reason": "简历明确说明本人从未对任何软件项目的整体交付负责，与岗位要求直接相反。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 280,
+          "completion_tokens": 62,
+          "total_tokens": 342,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 152
+        },
+        "ms": 1492
+      },
+      "B": {
+        "answer": {
+          "quote": "绩效模块由搭档整体负责，我负责验收。我做过的其他软件项目也只负责验收，从未对整体交付负责。",
+          "label": "明确不符",
+          "decision": "暂缓",
+          "reason": "简历明确说明项目由搭档整体负责且本人只负责验收，从未对整体交付负责，构成直接反证。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 280,
+          "completion_tokens": 68,
+          "total_tokens": 348,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 152
+        },
+        "ms": 1046
+      },
+      "C": {
+        "answer": {
+          "quote": "绩效模块由搭档整体负责，我负责验收。我做过的其他软件项目也只负责验收，从未对整体交付负责。",
+          "label": "明确不符",
+          "decision": "暂缓",
+          "reason": "简历明确说明从未对软件项目整体交付负责，与要求直接冲突。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 342,
+          "completion_tokens": 59,
+          "total_tokens": 401,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 214
+        },
+        "ms": 1491
+      }
+    },
+    {
+      "id": "11a",
+      "split": "round2",
+      "pair": "11-两项硬条件",
+      "purpose": "一条证据和一条未知，或一条证据和一条反证",
+      "requirement": "须同时具备企业 AI 功能上线和直接管理至少 5 人两项经验。两项都有明确证据才算支持。确认任一项不符即明确不符；只证实一项而另一项没有足够证据时算部分支持。",
+      "resume": "由我负责的企业知识库问答上线后供客服使用，协调了8位来自各部门的同事。",
+      "expected": {
+        "label": "部分支持",
+        "decision": "需要补证"
+      },
+      "A": {
+        "answer": {
+          "decision": "需要补证",
+          "label": "部分支持",
+          "quote": "由我负责的企业知识库问答上线后供客服使用，协调了8位来自各部门的同事。",
+          "reason": "企业AI功能上线有明确证据，但“协调8位同事”不等于直接管理至少5人，管理经验证据不足。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": true,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 283,
+          "completion_tokens": 67,
+          "total_tokens": 350,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 155
+        },
+        "ms": 2487
+      },
+      "B": {
+        "answer": {
+          "quote": "由我负责的企业知识库问答上线后供客服使用，协调了8位来自各部门的同事。",
+          "label": "部分支持",
+          "decision": "需要补证",
+          "reason": "企业AI功能上线有明确证据，但“协调8位同事”不等于直接管理至少5人，管理经验证据不足。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": true,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 283,
+          "completion_tokens": 67,
+          "total_tokens": 350,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 155
+        },
+        "ms": 2166
+      },
+      "C": {
+        "answer": {
+          "quote": "由我负责的企业知识库问答上线后供客服使用，协调了8位来自各部门的同事。",
+          "label": "部分支持",
+          "decision": "需要补证",
+          "reason": "企业AI功能上线有明确证据，但“协调8位同事”不等于直接管理至少5人，管理经验证据不足。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": true,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 345,
+          "completion_tokens": 67,
+          "total_tokens": 412,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 217
+        },
+        "ms": 2467
+      }
+    },
+    {
+      "id": "11b",
+      "split": "round2",
+      "pair": "11-两项硬条件",
+      "purpose": "一条证据和一条未知，或一条证据和一条反证",
+      "requirement": "须同时具备企业 AI 功能上线和直接管理至少 5 人两项经验。两项都有明确证据才算支持。确认任一项不符即明确不符；只证实一项而另一项没有足够证据时算部分支持。",
+      "resume": "由我负责的企业知识库问答上线后供客服使用，协调了8位来自各部门的同事。我没有过直属管理经历。",
+      "expected": {
+        "label": "明确不符",
+        "decision": "暂缓"
+      },
+      "A": {
+        "answer": {
+          "decision": "暂缓",
+          "label": "明确不符",
+          "quote": "我没有过直属管理经历。",
+          "reason": "企业AI功能上线有明确证据，但直接管理至少5人的经验被明确否认，两项要求未同时满足。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 289,
+          "completion_tokens": 48,
+          "total_tokens": 337,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 161
+        },
+        "ms": 2487
+      },
+      "B": {
+        "answer": {
+          "quote": "由我负责的企业知识库问答上线后供客服使用，协调了8位来自各部门的同事。我没有过直属管理经历。",
+          "label": "明确不符",
+          "decision": "暂缓",
+          "reason": "企业AI功能上线有证据，但明确自述无直属管理经历，管理至少5人一项不符。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 289,
+          "completion_tokens": 68,
+          "total_tokens": 357,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 161
+        },
+        "ms": 2514
+      },
+      "C": {
+        "answer": {
+          "quote": "我没有过直属管理经历。",
+          "label": "明确不符",
+          "decision": "暂缓",
+          "reason": "简历明确否认有直属管理经历，直接违反“直接管理至少5人”的硬性条件。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 351,
+          "completion_tokens": 45,
+          "total_tokens": 396,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 223
+        },
+        "ms": 2486
+      }
+    },
+    {
+      "id": "12a",
+      "split": "round2",
+      "pair": "12-否定词陷阱",
+      "purpose": "同一段证据带有否定词也应保持判断",
+      "requirement": "当前职位的直属团队至少 5 人。历史职位的人数不能替代当前数据；矩阵协作人数不能当作直属人数。",
+      "resume": "我目前直接带领6位设计师，负责他们的考核、晋升和工作安排。",
+      "expected": {
+        "label": "支持",
+        "decision": "建议约聊"
+      },
+      "A": {
+        "answer": {
+          "decision": "建议约聊",
+          "label": "支持",
+          "quote": "我目前直接带领6位设计师，负责他们的考核、晋升和工作安排。",
+          "reason": "简历明确说明当前直接带领6位设计师，满足直属团队至少5人的要求。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 256,
+          "completion_tokens": 51,
+          "total_tokens": 307,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 256
+        },
+        "ms": 1183
+      },
+      "B": {
+        "answer": {
+          "quote": "我目前直接带领6位设计师，负责他们的考核、晋升和工作安排。",
+          "label": "支持",
+          "decision": "建议约聊",
+          "reason": "简历明确说明当前直接带领6位设计师，满足直属团队至少5人的要求。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 256,
+          "completion_tokens": 51,
+          "total_tokens": 307,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 256
+        },
+        "ms": 1223
+      },
+      "C": {
+        "answer": {
+          "quote": "我目前直接带领6位设计师，负责他们的考核、晋升和工作安排。",
+          "label": "支持",
+          "decision": "建议约聊",
+          "reason": "简历明确说明当前直接带领6位设计师，满足直属团队至少5人的要求。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 318,
+          "completion_tokens": 51,
+          "total_tokens": 369,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 190
+        },
+        "ms": 1017
+      }
+    },
+    {
+      "id": "12b",
+      "split": "round2",
+      "pair": "12-否定词陷阱",
+      "purpose": "同一段证据带有否定词也应保持判断",
+      "requirement": "当前职位的直属团队至少 5 人。历史职位的人数不能替代当前数据；矩阵协作人数不能当作直属人数。",
+      "resume": "目前不是设计总监。6位设计师直接向我汇报，我负责他们的考核、晋升和工作安排。",
+      "expected": {
+        "label": "支持",
+        "decision": "建议约聊"
+      },
+      "A": {
+        "answer": {
+          "decision": "需要补证",
+          "label": "证据不足",
+          "quote": "目前不是设计总监。6位设计师直接向我汇报，我负责他们的考核、晋升和工作安排。",
+          "reason": "简历说明当前有6位设计师直接汇报，但未明确这是当前职位的直属团队，且开头称目前不是设计总监，无法确认当前职位团队规模。"
+        },
+        "grade": {
+          "labelCorrect": false,
+          "decisionCorrect": false,
+          "falsePass": false,
+          "missedChat": true,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": true,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 261,
+          "completion_tokens": 74,
+          "total_tokens": 335,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 261
+        },
+        "ms": 1407
+      },
+      "B": {
+        "answer": {
+          "quote": "6位设计师直接向我汇报，我负责他们的考核、晋升和工作安排。",
+          "label": "支持",
+          "decision": "建议约聊",
+          "reason": "简历明确说明有6位设计师直接汇报，满足直属团队至少5人的要求。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 261,
+          "completion_tokens": 51,
+          "total_tokens": 312,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 261
+        },
+        "ms": 1004
+      },
+      "C": {
+        "answer": {
+          "quote": "6位设计师直接向我汇报，我负责他们的考核、晋升和工作安排。",
+          "label": "部分支持",
+          "decision": "需要补证",
+          "reason": "简历写的是历史职位有6名设计师直接汇报，但未说明当前职位直属团队人数，不能替代当前数据。"
+        },
+        "grade": {
+          "labelCorrect": false,
+          "decisionCorrect": false,
+          "falsePass": false,
+          "missedChat": true,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": true,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 323,
+          "completion_tokens": 60,
+          "total_tokens": 383,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 195
+        },
+        "ms": 1133
+      }
+    },
+    {
+      "id": "13a",
+      "split": "round2",
+      "pair": "13-缺少时间",
+      "purpose": "上线事实不能代替时间范围",
+      "requirement": "过去 24 个月内至少一次负责把 AI 功能交付给真实业务团队使用。以 2026 年 11 月为当前时间。只列过原型或评审，未说明该时段是否还有投产经历，算部分支持；有正式使用但时间不明，算证据不足。",
+      "resume": "曾负责把AI对账助手交付给财务正式使用；简历中未列该项目起止时间。",
+      "expected": {
+        "label": "证据不足",
+        "decision": "需要补证"
+      },
+      "A": {
+        "answer": {
+          "decision": "需要补证",
+          "label": "证据不足",
+          "quote": "曾负责把AI对账助手交付给财务正式使用；简历中未列该项目起止时间。",
+          "reason": "有正式投产使用描述但未说明时间，无法确认是否在近24个月内。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": true,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 299,
+          "completion_tokens": 58,
+          "total_tokens": 357,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 171
+        },
+        "ms": 2386
+      },
+      "B": {
+        "answer": {
+          "quote": "曾负责把AI对账助手交付给财务正式使用；简历中未列该项目起止时间。",
+          "label": "证据不足",
+          "decision": "需要补证",
+          "reason": "有正式投产使用描述但缺少时间信息，无法确认是否在近24个月内。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": true,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 299,
+          "completion_tokens": 58,
+          "total_tokens": 357,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 171
+        },
+        "ms": 2357
+      },
+      "C": {
+        "answer": {
+          "quote": "曾负责把AI对账助手交付给财务正式使用；简历中未列该项目起止时间。",
+          "label": "证据不足",
+          "decision": "需要补证",
+          "reason": "有正式投产使用经历但未标明时间，无法确认是否在近24个月内。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": true,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 361,
+          "completion_tokens": 58,
+          "total_tokens": 419,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 233
+        },
+        "ms": 2298
+      }
+    },
+    {
+      "id": "13b",
+      "split": "round2",
+      "pair": "13-缺少时间",
+      "purpose": "上线事实不能代替时间范围",
+      "requirement": "过去 24 个月内至少一次负责把 AI 功能交付给真实业务团队使用。以 2026 年 11 月为当前时间。只列过原型或评审，未说明该时段是否还有投产经历，算部分支持；有正式使用但时间不明，算证据不足。",
+      "resume": "2026年7月负责把AI对账助手交付给财务正式使用。",
+      "expected": {
+        "label": "支持",
+        "decision": "建议约聊"
+      },
+      "A": {
+        "answer": {
+          "decision": "建议约聊",
+          "label": "支持",
+          "quote": "2026年7月负责把AI对账助手交付给财务正式使用。",
+          "reason": "简历明确写到2026年7月将AI功能交付给财务正式使用，处于过去24个月内，符合要求。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 294,
+          "completion_tokens": 59,
+          "total_tokens": 353,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 166
+        },
+        "ms": 2453
+      },
+      "B": {
+        "answer": {
+          "quote": "2026年7月负责把AI对账助手交付给财务正式使用。",
+          "label": "支持",
+          "decision": "建议约聊",
+          "reason": "2026年7月距2026年11月不足24个月，且明确说明交付给财务正式使用，符合要求。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 294,
+          "completion_tokens": 61,
+          "total_tokens": 355,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 166
+        },
+        "ms": 2177
+      },
+      "C": {
+        "answer": {
+          "quote": "2026年7月负责把AI对账助手交付给财务正式使用。",
+          "label": "支持",
+          "decision": "建议约聊",
+          "reason": "2026年7月距当前时间约4个月，在24个月内，且明确说明交付给财务正式使用，符合要求。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 356,
+          "completion_tokens": 62,
+          "total_tokens": 418,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 228
+        },
+        "ms": 2351
+      }
+    }
+  ]
+}

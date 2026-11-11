@@ -1,0 +1,1113 @@
+{
+  "model": "deepseek-flash",
+  "split": "heldout",
+  "runAt": "2026-11-11T09:41:13.191Z",
+  "summary": {
+    "total": 10,
+    "paired": 10,
+    "excludedCases": [],
+    "supportedCases": 5,
+    "unsupportedCases": 5,
+    "expectedChecks": 3,
+    "expectedHolds": 2,
+    "variants": {
+      "A": {
+        "labelCorrect": 10,
+        "decisionCorrect": 10,
+        "falsePass": 0,
+        "missedChat": 0,
+        "prematureHold": 0,
+        "missedHold": 0,
+        "needsCheck": 3,
+        "quotePass": 10,
+        "failures": 0,
+        "pairsFullyCorrect": 5,
+        "errorCases": []
+      },
+      "B": {
+        "labelCorrect": 8,
+        "decisionCorrect": 8,
+        "falsePass": 0,
+        "missedChat": 0,
+        "prematureHold": 2,
+        "missedHold": 0,
+        "needsCheck": 1,
+        "quotePass": 10,
+        "failures": 0,
+        "pairsFullyCorrect": 3,
+        "errorCases": [
+          "04a",
+          "07a"
+        ]
+      },
+      "C": {
+        "labelCorrect": 8,
+        "decisionCorrect": 8,
+        "falsePass": 0,
+        "missedChat": 0,
+        "prematureHold": 2,
+        "missedHold": 0,
+        "needsCheck": 1,
+        "quotePass": 10,
+        "failures": 0,
+        "pairsFullyCorrect": 3,
+        "errorCases": [
+          "05b",
+          "07a"
+        ]
+      }
+    }
+  },
+  "rows": [
+    {
+      "id": "03a",
+      "split": "heldout",
+      "pair": "03-措辞变化",
+      "purpose": "同样的职责换一种表达",
+      "requirement": "独立主导软件产品从需求到上线。直接证据需覆盖需求决策、上线决策或交付责任，且本人对整体负责。仅参与部分环节算部分支持。",
+      "resume": "作为产品负责人独立主导访客系统从需求决策到发布交付。",
+      "expected": {
+        "label": "支持",
+        "decision": "建议约聊"
+      },
+      "A": {
+        "answer": {
+          "decision": "建议约聊",
+          "label": "支持",
+          "quote": "作为产品负责人独立主导访客系统从需求决策到发布交付。",
+          "reason": "简历明确写明本人作为产品负责人独立主导从需求决策到发布交付，覆盖需求决策与交付责任且对整体负责。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 264,
+          "completion_tokens": 59,
+          "total_tokens": 323,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 136
+        },
+        "ms": 1658
+      },
+      "B": {
+        "answer": {
+          "quote": "作为产品负责人独立主导访客系统从需求决策到发布交付。",
+          "label": "支持",
+          "decision": "建议约聊",
+          "reason": "原文明确本人作为产品负责人独立主导从需求决策到发布交付，覆盖需求决策与交付责任且对整体负责。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 264,
+          "completion_tokens": 58,
+          "total_tokens": 322,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 136
+        },
+        "ms": 2101
+      },
+      "C": {
+        "answer": {
+          "quote": "作为产品负责人独立主导访客系统从需求决策到发布交付。",
+          "label": "支持",
+          "decision": "建议约聊",
+          "reason": "原文明确写明本人作为产品负责人独立主导从需求决策到发布交付，直接覆盖需求决策与交付责任且对整体负责。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 326,
+          "completion_tokens": 60,
+          "total_tokens": 386,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 198
+        },
+        "ms": 1976
+      }
+    },
+    {
+      "id": "03b",
+      "split": "heldout",
+      "pair": "03-措辞变化",
+      "purpose": "同样的职责换一种表达",
+      "requirement": "独立主导软件产品从需求到上线。直接证据需覆盖需求决策、上线决策或交付责任，且本人对整体负责。仅参与部分环节算部分支持。",
+      "resume": "访客系统由我独立定需求、定发布范围，并对正式投产交付负责。",
+      "expected": {
+        "label": "支持",
+        "decision": "建议约聊"
+      },
+      "A": {
+        "answer": {
+          "decision": "建议约聊",
+          "label": "支持",
+          "quote": "访客系统由我独立定需求、定发布范围，并对正式投产交付负责。",
+          "reason": "简历明确说明本人独立定需求、定发布范围并对正式投产交付负责，覆盖需求决策、上线决策与交付责任，且本人对整体负责。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 268,
+          "completion_tokens": 69,
+          "total_tokens": 337,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 140
+        },
+        "ms": 1595
+      },
+      "B": {
+        "answer": {
+          "quote": "访客系统由我独立定需求、定发布范围，并对正式投产交付负责。",
+          "label": "支持",
+          "decision": "建议约聊",
+          "reason": "原文明确体现本人独立决策需求与发布范围并对正式投产交付负责，覆盖需求决策、上线决策和交付责任。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 268,
+          "completion_tokens": 62,
+          "total_tokens": 330,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 140
+        },
+        "ms": 2082
+      },
+      "C": {
+        "answer": {
+          "quote": "访客系统由我独立定需求、定发布范围，并对正式投产交付负责。",
+          "label": "支持",
+          "decision": "建议约聊",
+          "reason": "原文明确本人独立定需求、定发布范围并对投产交付负责，覆盖需求决策与上线决策且对整体负责。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 330,
+          "completion_tokens": 62,
+          "total_tokens": 392,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 202
+        },
+        "ms": 2370
+      }
+    },
+    {
+      "id": "04a",
+      "split": "heldout",
+      "pair": "04-只差一句",
+      "purpose": "区分缺少材料和明确反证",
+      "requirement": "直接管理至少 5 名团队成员。跨团队协调不计入直属管理，未提团队规模属于证据不足。",
+      "resume": "负责协调7位同事完成项目，管理供应商交付进度。",
+      "expected": {
+        "label": "证据不足",
+        "decision": "需要补证"
+      },
+      "A": {
+        "answer": {
+          "decision": "需要补证",
+          "label": "证据不足",
+          "quote": "负责协调7位同事完成项目，管理供应商交付进度。",
+          "reason": "简历只提到协调7位同事和管理供应商，未说明是否直接管理至少5名直属团队成员。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": true,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 251,
+          "completion_tokens": 52,
+          "total_tokens": 303,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 251
+        },
+        "ms": 807
+      },
+      "B": {
+        "answer": {
+          "quote": "负责协调7位同事完成项目，管理供应商交付进度。",
+          "label": "明确不符",
+          "decision": "暂缓",
+          "reason": "仅体现跨团队协调7位同事，未体现直接管理至少5名团队成员，且跨团队协调不计入直属管理。"
+        },
+        "grade": {
+          "labelCorrect": false,
+          "decisionCorrect": false,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": true,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 251,
+          "completion_tokens": 57,
+          "total_tokens": 308,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 251
+        },
+        "ms": 771
+      },
+      "C": {
+        "answer": {
+          "quote": "负责协调7位同事完成项目，管理供应商交付进度。",
+          "label": "证据不足",
+          "decision": "需要补证",
+          "reason": "协调7位同事属于跨团队协调，未体现直接管理至少5名直属团队成员。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": true,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 313,
+          "completion_tokens": 50,
+          "total_tokens": 363,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 185
+        },
+        "ms": 903
+      }
+    },
+    {
+      "id": "04b",
+      "split": "heldout",
+      "pair": "04-只差一句",
+      "purpose": "区分缺少材料和明确反证",
+      "requirement": "直接管理至少 5 名团队成员。跨团队协调不计入直属管理，未提团队规模属于证据不足。",
+      "resume": "负责协调7位同事完成项目，管理供应商交付进度。没有直属下属。",
+      "expected": {
+        "label": "明确不符",
+        "decision": "暂缓"
+      },
+      "A": {
+        "answer": {
+          "decision": "暂缓",
+          "label": "明确不符",
+          "quote": "没有直属下属。",
+          "reason": "简历明确说明没有直属下属，不符合直接管理至少5名团队成员的要求。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 255,
+          "completion_tokens": 37,
+          "total_tokens": 292,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 255
+        },
+        "ms": 924
+      },
+      "B": {
+        "answer": {
+          "quote": "没有直属下属。",
+          "label": "明确不符",
+          "decision": "暂缓",
+          "reason": "简历明确说明没有直属下属，不符合直接管理至少5名团队成员的要求。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 255,
+          "completion_tokens": 37,
+          "total_tokens": 292,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 255
+        },
+        "ms": 683
+      },
+      "C": {
+        "answer": {
+          "quote": "没有直属下属。",
+          "label": "明确不符",
+          "decision": "暂缓",
+          "reason": "简历明确说明没有直属下属，与直接管理至少5名团队成员的要求直接冲突。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 317,
+          "completion_tokens": 39,
+          "total_tokens": 356,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 189
+        },
+        "ms": 747
+      }
+    },
+    {
+      "id": "05a",
+      "split": "heldout",
+      "pair": "05-关键词干扰",
+      "purpose": "是否投产取决于正文描述",
+      "requirement": "本人负责的 AI 功能已在真实业务中投入使用。只做出原型算部分支持。明确没有上线且没有其他上线记录算明确不符。",
+      "resume": "简历标题：AI Agent 商业化落地。本人负责搭建客服原型，仅供内部演示，项目未部署上线。",
+      "expected": {
+        "label": "明确不符",
+        "decision": "暂缓"
+      },
+      "A": {
+        "answer": {
+          "decision": "暂缓",
+          "label": "明确不符",
+          "quote": "本人负责搭建客服原型，仅供内部演示，项目未部署上线。",
+          "reason": "简历明确说明项目未部署上线，仅内部演示原型，与岗位要求的真实业务投入使用不符。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 268,
+          "completion_tokens": 53,
+          "total_tokens": 321,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 140
+        },
+        "ms": 974
+      },
+      "B": {
+        "answer": {
+          "quote": "本人负责搭建客服原型，仅供内部演示，项目未部署上线。",
+          "label": "明确不符",
+          "decision": "暂缓",
+          "reason": "简历明确说明项目未部署上线，仅内部演示原型，符合明确不符标准。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 268,
+          "completion_tokens": 50,
+          "total_tokens": 318,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 140
+        },
+        "ms": 2273
+      },
+      "C": {
+        "answer": {
+          "quote": "本人负责搭建客服原型，仅供内部演示，项目未部署上线。",
+          "label": "明确不符",
+          "decision": "暂缓",
+          "reason": "简历明确说明项目未部署上线，与要求中 AI 功能已在真实业务中投入使用直接冲突。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 330,
+          "completion_tokens": 54,
+          "total_tokens": 384,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 202
+        },
+        "ms": 871
+      }
+    },
+    {
+      "id": "05b",
+      "split": "heldout",
+      "pair": "05-关键词干扰",
+      "purpose": "是否投产取决于正文描述",
+      "requirement": "本人负责的 AI 功能已在真实业务中投入使用。只做出原型算部分支持。明确没有上线且没有其他上线记录算明确不符。",
+      "resume": "我做过一个客服助手样机，仍在论证阶段。",
+      "expected": {
+        "label": "部分支持",
+        "decision": "需要补证"
+      },
+      "A": {
+        "answer": {
+          "decision": "需要补证",
+          "label": "部分支持",
+          "quote": "我做过一个客服助手样机，仍在论证阶段。",
+          "reason": "简历只提到客服助手样机且仍在论证阶段，属于原型，未体现真实业务上线，按规则算部分支持。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": true,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 256,
+          "completion_tokens": 57,
+          "total_tokens": 313,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 256
+        },
+        "ms": 924
+      },
+      "B": {
+        "answer": {
+          "quote": "我做过一个客服助手样机，仍在论证阶段。",
+          "label": "部分支持",
+          "decision": "需要补证",
+          "reason": "仅提到客服助手样机且仍在论证阶段，属于原型，未体现真实业务上线。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": true,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 256,
+          "completion_tokens": 50,
+          "total_tokens": 306,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 256
+        },
+        "ms": 2272
+      },
+      "C": {
+        "answer": {
+          "quote": "我做过一个客服助手样机，仍在论证阶段。",
+          "label": "明确不符",
+          "decision": "暂缓",
+          "reason": "简历明确说明仅做样机且仍在论证阶段，未上线，符合明确不符条件。"
+        },
+        "grade": {
+          "labelCorrect": false,
+          "decisionCorrect": false,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": true,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 318,
+          "completion_tokens": 49,
+          "total_tokens": 367,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 190
+        },
+        "ms": 952
+      }
+    },
+    {
+      "id": "06a",
+      "split": "heldout",
+      "pair": "06-职位名称",
+      "purpose": "相同职务内容不因头衔改变",
+      "requirement": "本人实际负责招聘工作流程，或为招聘业务设计并交付过工作流程。使用何种职位名称不影响判断。",
+      "resume": "招聘产品经理。负责设计面试排期与候选人跟进流程，并交付给招聘团队使用。",
+      "expected": {
+        "label": "支持",
+        "decision": "建议约聊"
+      },
+      "A": {
+        "answer": {
+          "decision": "建议约聊",
+          "label": "支持",
+          "quote": "负责设计面试排期与候选人跟进流程，并交付给招聘团队使用。",
+          "reason": "简历明确描述为招聘业务设计并交付了工作流程，符合岗位要求。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 259,
+          "completion_tokens": 51,
+          "total_tokens": 310,
+          "prompt_tokens_details": {
+            "cached_tokens": 125
+          },
+          "prompt_cache_hit_tokens": 125,
+          "prompt_cache_miss_tokens": 134
+        },
+        "ms": 2545
+      },
+      "B": {
+        "answer": {
+          "quote": "负责设计面试排期与候选人跟进流程，并交付给招聘团队使用。",
+          "label": "支持",
+          "decision": "建议约聊",
+          "reason": "简历明确描述其设计并交付了招聘相关流程，直接符合要求。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 259,
+          "completion_tokens": 50,
+          "total_tokens": 309,
+          "prompt_tokens_details": {
+            "cached_tokens": 125
+          },
+          "prompt_cache_hit_tokens": 125,
+          "prompt_cache_miss_tokens": 134
+        },
+        "ms": 3146
+      },
+      "C": {
+        "answer": {
+          "quote": "负责设计面试排期与候选人跟进流程，并交付给招聘团队使用。",
+          "label": "支持",
+          "decision": "建议约聊",
+          "reason": "简历明确陈述为招聘业务设计并交付了工作流程，符合要求。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 321,
+          "completion_tokens": 50,
+          "total_tokens": 371,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 193
+        },
+        "ms": 2693
+      }
+    },
+    {
+      "id": "06b",
+      "split": "heldout",
+      "pair": "06-职位名称",
+      "purpose": "相同职务内容不因头衔改变",
+      "requirement": "本人实际负责招聘工作流程，或为招聘业务设计并交付过工作流程。使用何种职位名称不影响判断。",
+      "resume": "运营专员。负责设计面试排期与候选人跟进流程，并交付给招聘团队使用。",
+      "expected": {
+        "label": "支持",
+        "decision": "建议约聊"
+      },
+      "A": {
+        "answer": {
+          "decision": "建议约聊",
+          "label": "支持",
+          "quote": "负责设计面试排期与候选人跟进流程，并交付给招聘团队使用。",
+          "reason": "简历明确描述为招聘业务设计并交付了工作流程，符合岗位要求。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 258,
+          "completion_tokens": 51,
+          "total_tokens": 309,
+          "prompt_tokens_details": {
+            "cached_tokens": 124
+          },
+          "prompt_cache_hit_tokens": 124,
+          "prompt_cache_miss_tokens": 134
+        },
+        "ms": 2646
+      },
+      "B": {
+        "answer": {
+          "quote": "负责设计面试排期与候选人跟进流程，并交付给招聘团队使用。",
+          "label": "支持",
+          "decision": "建议约聊",
+          "reason": "简历明确描述设计并交付了招聘相关流程，直接符合要求。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 258,
+          "completion_tokens": 49,
+          "total_tokens": 307,
+          "prompt_tokens_details": {
+            "cached_tokens": 124
+          },
+          "prompt_cache_hit_tokens": 124,
+          "prompt_cache_miss_tokens": 134
+        },
+        "ms": 2924
+      },
+      "C": {
+        "answer": {
+          "quote": "负责设计面试排期与候选人跟进流程，并交付给招聘团队使用。",
+          "label": "支持",
+          "decision": "建议约聊",
+          "reason": "简历明确陈述设计并交付了招聘相关流程，直接符合要求。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 320,
+          "completion_tokens": 49,
+          "total_tokens": 369,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 192
+        },
+        "ms": 2764
+      }
+    },
+    {
+      "id": "07a",
+      "split": "heldout",
+      "pair": "07-岗位要求",
+      "purpose": "同一份材料在两项岗位要求下得出不同结论",
+      "requirement": "独立主导软件产品从需求到上线。直接证据需覆盖需求决策、上线决策或交付责任，且本人对整体负责。仅参与部分环节算部分支持。",
+      "resume": "物流排班系统由另一位同事主导。我负责最终验收并签署验收单。",
+      "expected": {
+        "label": "部分支持",
+        "decision": "需要补证"
+      },
+      "A": {
+        "answer": {
+          "decision": "需要补证",
+          "label": "部分支持",
+          "quote": "物流排班系统由另一位同事主导。我负责最终验收并签署验收单。",
+          "reason": "本人仅负责验收环节，未体现主导需求决策或上线决策，整体主导责任不足。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": true,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 267,
+          "completion_tokens": 56,
+          "total_tokens": 323,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 139
+        },
+        "ms": 1461
+      },
+      "B": {
+        "answer": {
+          "quote": "物流排班系统由另一位同事主导。我负责最终验收并签署验收单。",
+          "label": "明确不符",
+          "decision": "暂缓",
+          "reason": "简历明确说明项目由他人主导，本人仅负责验收，未体现独立主导从需求到上线的整体责任。"
+        },
+        "grade": {
+          "labelCorrect": false,
+          "decisionCorrect": false,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": true,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 267,
+          "completion_tokens": 60,
+          "total_tokens": 327,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 139
+        },
+        "ms": 1458
+      },
+      "C": {
+        "answer": {
+          "quote": "物流排班系统由另一位同事主导。我负责最终验收并签署验收单。",
+          "label": "明确不符",
+          "decision": "暂缓",
+          "reason": "简历明确说明项目由他人主导，本人仅负责验收，未体现独立主导从需求到上线的整体责任。"
+        },
+        "grade": {
+          "labelCorrect": false,
+          "decisionCorrect": false,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": true,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 329,
+          "completion_tokens": 60,
+          "total_tokens": 389,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 201
+        },
+        "ms": 1536
+      }
+    },
+    {
+      "id": "07b",
+      "split": "heldout",
+      "pair": "07-岗位要求",
+      "purpose": "同一份材料在两项岗位要求下得出不同结论",
+      "requirement": "本人负责上线验收。能看出本人承担验收即支持，无需主导整个项目。",
+      "resume": "物流排班系统由另一位同事主导。我负责最终验收并签署验收单。",
+      "expected": {
+        "label": "支持",
+        "decision": "建议约聊"
+      },
+      "A": {
+        "answer": {
+          "decision": "建议约聊",
+          "label": "支持",
+          "quote": "我负责最终验收并签署验收单。",
+          "reason": "简历明确写出本人负责最终验收并签署验收单，符合岗位对上线验收的要求。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 249,
+          "completion_tokens": 45,
+          "total_tokens": 294,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 249
+        },
+        "ms": 1378
+      },
+      "B": {
+        "answer": {
+          "quote": "我负责最终验收并签署验收单。",
+          "label": "支持",
+          "decision": "建议约聊",
+          "reason": "简历明确写明本人负责最终验收并签署验收单，直接满足本人承担验收的要求。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 249,
+          "completion_tokens": 45,
+          "total_tokens": 294,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 249
+        },
+        "ms": 1431
+      },
+      "C": {
+        "answer": {
+          "quote": "我负责最终验收并签署验收单。",
+          "label": "支持",
+          "decision": "建议约聊",
+          "reason": "简历明确写明本人负责最终验收并签署验收单，直接满足承担验收的要求。"
+        },
+        "grade": {
+          "labelCorrect": true,
+          "decisionCorrect": true,
+          "falsePass": false,
+          "missedChat": false,
+          "prematureHold": false,
+          "missedHold": false,
+          "needsCheck": false,
+          "quotePass": true
+        },
+        "model": "deepseek-flash",
+        "fingerprint": "bc19ba97cbe016479903222bb1578db6",
+        "usage": {
+          "prompt_tokens": 311,
+          "completion_tokens": 44,
+          "total_tokens": 355,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 183
+        },
+        "ms": 1427
+      }
+    }
+  ]
+}
